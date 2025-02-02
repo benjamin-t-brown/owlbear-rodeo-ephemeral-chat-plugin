@@ -21,12 +21,12 @@ window.addEventListener('load', () => {
         text: chatMessage.text,
       });
       chat.reRenderAll();
-      OBR.action.setIcon('/iconActive.svg');
+      OBR.action.setIcon('/owlbear-rodeo-ephemeral-chat-plugin/iconActive.svg');
     });
 
     OBR.action.onOpenChange((isOpen) => {
       if (isOpen) {
-        OBR.action.setIcon('/icon.svg');
+        OBR.action.setIcon('/owlbear-rodeo-ephemeral-chat-plugin/icon.svg');
       }
     });
 
