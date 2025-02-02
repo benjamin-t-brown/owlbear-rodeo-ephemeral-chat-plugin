@@ -23,12 +23,13 @@ export class Chat extends ClElement<ChatProps> {
       height: 'calc(600px - 20px)',
       display: 'flex',
       flexDirection: 'column',
+      justifyContent: 'space-between',
       alignItems: 'center',
     });
 
     const chatMessagesContainer = createElement('div', {
       width: `calc(100% - 8px)`,
-      height: 'calc(100% - 32px)',
+      height: 'calc(100% - 40px)',
     });
     chatMessagesContainer.id = 'chatMessagesContainer';
     appendChild(root, chatMessagesContainer);
