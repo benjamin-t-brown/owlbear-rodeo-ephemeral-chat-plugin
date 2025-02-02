@@ -56,9 +56,8 @@ export class ChatMessages extends ClElement<ChatMessagesProps> {
       appendChild(root, messageDiv);
     }
 
-    root.scrollTop = root.scrollHeight;
-
     this.root = root;
     this.parent.appendChild(this.root);
+    root.scrollTop = root.scrollHeight;
   }
 }
