@@ -71,7 +71,8 @@ export class BasicButton extends ClElement<BasicButtonProps> {
     setMouseTouchDown(buttonDiv, (ev) => {
       ev.preventDefault();
       ev.stopPropagation();
-      if (ev instanceof TouchEvent) {
+      const isTouch = (ev as PointerEvent).pointerType === 'touch';
+      if (isTouch) {
         props.onClick();
       }
       assignCss(buttonDiv, {
