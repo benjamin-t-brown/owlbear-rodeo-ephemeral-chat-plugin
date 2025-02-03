@@ -15,10 +15,6 @@ export class Textarea extends ClElement<TextareaProps> {
       onKeyPress: () => {},
     };
 
-    // const root = createElement('div', {
-    //   width: `100%`,
-    //   height: `100%`,
-    // });
     const textarea = createElement('input', {
       width: props.width ?? `100%`,
       height: `100%`,
@@ -31,10 +27,8 @@ export class Textarea extends ClElement<TextareaProps> {
       props.onChange(value);
     });
     textarea.addEventListener('keypress', (ev) => {
-      // console.log('EV KEYPRESS', ev);
       props.onKeyPress(ev);
     });
-    // appendChild(root, textarea);
 
     this.root = textarea;
     this.parent.appendChild(this.root);
