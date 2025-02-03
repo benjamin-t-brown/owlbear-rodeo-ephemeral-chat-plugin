@@ -1,5 +1,11 @@
-import { AppState, ChatMessage } from './state';
+import { AppState } from './state';
 import OBR from '@owlbear-rodeo/sdk';
+
+export const getOBR = () => {
+  return OBR.isAvailable ? OBR : undefined;
+};
+
+export const GLOBAL_SUB_URL = 'owlbear-rodeo-ephemeral-chat-plugin';
 
 export const BROADCAST_CHAT_TYPE = 'owlbear-rodeo-ephemeral-chat';
 
@@ -31,6 +37,9 @@ export const sendChat = (message: string) => {
       text: message,
     };
     appState.messages.push(chatMessage);
-    OBR.broadcast.sendMessage(BROADCAST_CHAT_TYPE, JSON.stringify(chatMessage));
+    getOBR()?.broadcast.sendMessage(
+      BROADCAST_CHAT_TYPE,
+      JSON.stringify(chatMessage)
+    );
   });
 };

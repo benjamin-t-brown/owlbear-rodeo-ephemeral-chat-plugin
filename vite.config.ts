@@ -4,7 +4,7 @@ const rootPath = './';
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: '', // Makes paths relative
+  base: 'owlbear-rodeo-ephemeral-chat-plugin',
   plugins: [],
   build: {
     outDir: rootPath + 'dist',
