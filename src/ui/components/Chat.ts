@@ -68,6 +68,9 @@ export class Chat extends ClElement<ChatProps> {
       type: 'neutral',
       label: 'Send',
       fullHeight: true,
+      style: {
+        marginLeft: '8px',
+      },
       onClick: () => {
         const messageToSend = this.state.currentMessage?.trim();
         if (messageToSend.length === 0) {

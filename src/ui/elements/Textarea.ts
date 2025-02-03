@@ -20,6 +20,7 @@ export class Textarea extends ClElement<TextareaProps> {
       height: `100%`,
       resize: 'none',
       fontSize: '18px',
+      borderRadius: '4px',
     });
     textarea.setAttribute('maxlength', '128');
     textarea.value = props.value;
