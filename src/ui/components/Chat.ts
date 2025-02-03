@@ -30,7 +30,6 @@ export class Chat extends ClElement<ChatProps> {
     const chatMessagesContainer = createElement('div', {
       width: `calc(100% - 8px)`,
       height: 'calc(100% - 40px)',
-      background: 'blue',
     });
     chatMessagesContainer.id = 'chatMessagesContainer';
     appendChild(root, chatMessagesContainer);
@@ -40,11 +39,9 @@ export class Chat extends ClElement<ChatProps> {
 
     const textareaContainer = createElement('div', {
       width: `calc(100% - 8px)`,
-      // height: '32px',
       display: 'flex',
       alignItems: 'center',
       paddingTop: '8px',
-      background: 'red',
     });
     textareaContainer.id = 'textareaContainer';
     appendChild(root, textareaContainer);
