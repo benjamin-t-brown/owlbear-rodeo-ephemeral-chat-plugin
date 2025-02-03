@@ -6,7 +6,7 @@
     "title": "Owlbear Rodeo Ephemeral Chat",
     "icon": "/owlbear-rodeo-ephemeral-chat-plugin/icon.svg",
     "popover": "/owlbear-rodeo-ephemeral-chat-plugin",
-    "height": 600,
+    "height": 400,
     "width": 400
   }
 }
